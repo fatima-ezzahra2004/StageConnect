@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.BarChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.Label?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="com.example.projet.controllers.StatistiquesController" spacing="10">
+
+    <padding>
+        <Insets top="20" right="20" bottom="20" left="20"/>
+    </padding>
+
+    <Label text="Statistiques des Offres et Candidatures"
+           style="-fx-font-size: 18px; -fx-font-weight: bold;" />
+
+    <!-- Graphique des Offres -->
+    <BarChart fx:id="barChartOffres" prefHeight="300" prefWidth="600">
+        <xAxis>
+            <CategoryAxis label="Mois"/>
+        </xAxis>
+        <yAxis>
+            <NumberAxis label="Nombre d'Offres"
+                        lowerBound="0"
+                        upperBound="10"
+                        tickUnit="1"
+                        minorTickVisible="false"/>
+        </yAxis>
+    </BarChart>
+
+    <!-- Graphique des Candidatures -->
+    <BarChart fx:id="barChartCandidatures" prefHeight="300" prefWidth="600">
+        <xAxis>
+            <CategoryAxis label="Mois"/>
+        </xAxis>
+        <yAxis>
+            <NumberAxis label="Nombre de Candidatures"
+                        lowerBound="0"
+                        upperBound="10"
+                        tickUnit="1"
+                        minorTickVisible="false"/>
+        </yAxis>
+    </BarChart>
+
+</VBox>

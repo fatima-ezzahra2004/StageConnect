@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="com.example.projet.controllers.SelectEntrepriseController"
+      spacing="10" style="-fx-padding: 15;">
+
+    <Label text="Sélectionnez une entreprise :" style="-fx-font-weight: bold;"/>
+
+    <ListView fx:id="entreprisesListView" VBox.vgrow="ALWAYS">
+        <!-- Le cellFactory est configuré dans le contrôleur -->
+    </ListView>
+
+    <Button text="Valider" onAction="#handleSelection"
+            style="-fx-base: #2C3E50; -fx-text-fill: white;"/>
+</VBox>

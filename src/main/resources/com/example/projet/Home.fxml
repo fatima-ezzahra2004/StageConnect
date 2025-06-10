@@ -1,0 +1,35 @@
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Button?>
+
+<StackPane xmlns="http://javafx.com/javafx"
+           xmlns:fx="http://javafx.com/fxml"
+           fx:controller="com.example.projet.controllers.HomeController"
+           prefWidth="1000" prefHeight="650">
+
+    <!-- ImageView qui sera contrôlé dynamiquement -->
+    <ImageView fx:id="backgroundImage" fitWidth="1000" fitHeight="650" preserveRatio="false"/>
+
+    <!-- Bloc de contenu centré -->
+    <VBox alignment="CENTER" spacing="20" maxWidth="480"
+          style="-fx-background-color: rgba(255, 255, 255, 0.15);
+                 -fx-background-radius: 18;
+                 -fx-padding: 40;
+                 -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.5), 20, 0, 0, 0);">
+
+        <Label text="StageConnect"
+               style="-fx-font-size: 32px; -fx-font-weight: bold; -fx-text-fill: white;"/>
+        <Label text="Simplifiez votre recherche de stage avec StageConnect"
+               wrapText="true" style="-fx-text-fill: #eeeeee;"/>
+
+        <Button text="Se connecter" onAction="#goToLogin"
+                style="-fx-background-color: #2196f3; -fx-text-fill: white;"/>
+        <Button text="S’inscrire comme stagiaire" onAction="#goToSignupStagiaire"
+                style="-fx-background-color: #4caf50; -fx-text-fill: white;"/>
+        <Button text="S’inscrire comme entreprise" onAction="#goToSignupEntreprise"
+                style="-fx-background-color: #00897b; -fx-text-fill: white;"/>
+    </VBox>
+
+</StackPane>

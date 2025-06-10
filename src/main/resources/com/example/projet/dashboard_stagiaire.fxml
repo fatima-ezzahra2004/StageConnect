@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml" fx:controller="com.example.projet.controllers.DashboardStagiaireController">
+    <left>
+        <VBox spacing="10" style="-fx-background-color: #2C3E50;" prefWidth="220" alignment="TOP_CENTER">
+            <padding>
+                <Insets top="20" right="20" bottom="20" left="20"/>
+            </padding>
+            <Label text="StageConnect" style="-fx-text-fill: white; -fx-font-size: 20px; -fx-font-weight: bold;"/>
+            <Separator/>
+            <Button text="Profil" prefWidth="180" onAction="#handleProfil"/>
+            <Button text="Offres de stage" prefWidth="180" onAction="#handleOffres"/>
+            <Button text="Mes candidatures" prefWidth="180" onAction="#handleCandidatures"/>
+            <Button text="Messagerie" prefWidth="180" onAction="#handleMessagerie"/> <!-- AJOUT ICI -->
+            <Separator/>
+            <Button text="Déconnexion" style="-fx-background-color: #E74C3C; -fx-text-fill: white;" prefWidth="180" onAction="#handleLogout"/>
+        </VBox>
+    </left>
+
+    <center>
+        <StackPane fx:id="contentPane">
+            <padding>
+                <Insets top="10" right="10" bottom="10" left="10"/>
+            </padding>
+        </StackPane>
+    </center>
+</BorderPane>

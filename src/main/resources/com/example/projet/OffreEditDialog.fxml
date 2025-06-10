@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<DialogPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.example.projet.controllers.OffreEditDialogController">
+
+    <content>
+        <GridPane hgap="10" vgap="10">
+            <padding>
+                <Insets top="20" right="20" bottom="20" left="20"/>
+            </padding>
+
+            <Label text="Titre :" GridPane.rowIndex="0" GridPane.columnIndex="0"/>
+            <TextField fx:id="titreField" GridPane.rowIndex="0" GridPane.columnIndex="1"/>
+
+            <Label text="Description :" GridPane.rowIndex="1" GridPane.columnIndex="0"/>
+            <TextArea fx:id="descriptionArea" prefRowCount="4" GridPane.rowIndex="1" GridPane.columnIndex="1"/>
+
+            <Label text="Domaine :" GridPane.rowIndex="2" GridPane.columnIndex="0"/>
+            <TextField fx:id="domaineField" GridPane.rowIndex="2" GridPane.columnIndex="1"/>
+
+            <Label text="Type :" GridPane.rowIndex="3" GridPane.columnIndex="0"/>
+            <ComboBox fx:id="typeComboBox" GridPane.rowIndex="3" GridPane.columnIndex="1"/>
+
+            <Label text="Niveau requis :" GridPane.rowIndex="4" GridPane.columnIndex="0"/>
+            <TextField fx:id="niveauRequisField" GridPane.rowIndex="4" GridPane.columnIndex="1"/>
+
+            <Label text="Durée (jours) :" GridPane.rowIndex="5" GridPane.columnIndex="0"/>
+            <TextField fx:id="dureeField" GridPane.rowIndex="5" GridPane.columnIndex="1"/>
+
+            <Label text="Date de publication :" GridPane.rowIndex="6" GridPane.columnIndex="0"/>
+            <DatePicker fx:id="datePublicationPicker" GridPane.rowIndex="6" GridPane.columnIndex="1"/>
+
+            <Label text="Rémunéré :" GridPane.rowIndex="7" GridPane.columnIndex="0"/>
+            <CheckBox fx:id="estRemunereCheckBox" GridPane.rowIndex="7" GridPane.columnIndex="1"/>
+        </GridPane>
+    </content>
+
+    <buttonTypes>
+        <ButtonType text="OK" buttonData="OK_DONE"/>
+        <ButtonType text="Annuler" buttonData="CANCEL_CLOSE"/>
+    </buttonTypes>
+</DialogPane>

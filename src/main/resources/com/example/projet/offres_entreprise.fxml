@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox xmlns="http://javafx.com/javafx/17"
+      xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="com.example.projet.controllers.OffresEntrepriseController"
+      spacing="10" style="-fx-padding: 15;">
+
+    <Label text="Gestion des Offres" style="-fx-font-size: 18px; -fx-font-weight: bold;" />
+
+    <!-- TableView et ses colonnes -->
+    <TableView fx:id="tableOffres" prefHeight="400" prefWidth="600">
+        <columns>
+            <TableColumn fx:id="colTitre" text="Titre" prefWidth="100"/>
+            <TableColumn fx:id="colDescription" text="Description" prefWidth="150"/>
+            <TableColumn fx:id="colDomaine" text="Domaine" prefWidth="100"/>
+            <TableColumn fx:id="colType" text="Type" prefWidth="80"/>
+            <TableColumn fx:id="colNiveauRequis" text="Niveau Requis" prefWidth="120"/>
+            <TableColumn fx:id="colDuree" text="Durée (jours)" prefWidth="80"/>
+            <TableColumn fx:id="colDatePublication" text="Date de Publication" prefWidth="120"/>
+            <TableColumn fx:id="colRemuneration" text="Rémunération" prefWidth="100"/>
+        </columns>
+    </TableView>
+
+    <HBox spacing="10">
+        <Button text="Ajouter une Offre" onAction="#handleAjouterOffre" />
+        <Button text="Modifier Offre" onAction="#handleModifierOffre" />
+        <Button text="Supprimer Offre" onAction="#handleSupprimerOffre" />
+    </HBox>
+
+</VBox>

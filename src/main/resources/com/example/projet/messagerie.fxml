@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<VBox xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="com.example.projet.controllers.MessagerieController"
+      spacing="10" style="-fx-padding: 10;">
+
+    <Label fx:id="contactLabel" style="-fx-font-size: 16px; -fx-font-weight: bold;"/>
+
+    <ListView fx:id="messagesListView" style="-fx-background-insets: 0;"
+              VBox.vgrow="ALWAYS">
+    </ListView>
+
+    <HBox spacing="10" alignment="CENTER_RIGHT">
+        <TextArea fx:id="messageTextArea" HBox.hgrow="ALWAYS"
+                  promptText="Écrivez votre message..."
+                  style="-fx-pref-height: 60; -fx-wrap-text: true;"/>
+        <Button text="Envoyer" onAction="#handleEnvoyerMessage"
+                style="-fx-pref-width: 80; -fx-pref-height: 60;"/>
+    </HBox>
+</VBox>

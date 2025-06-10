@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.example.projet.controllers.DashboardEntrepriseController">
+
+    <!-- HEADER -->
+    <top>
+        <HBox spacing="10" style="-fx-background-color: #2C3E50;">
+            <padding>
+                <Insets top="10" right="10" bottom="10" left="10"/>
+            </padding>
+        <Label text="Dashboard Entreprise" style="-fx-text-fill: white;">
+                <font>
+                    <Font size="20"/>
+                </font>
+            </Label>
+            <Separator orientation="VERTICAL" />
+            <Label fx:id="lblNomEntreprise" style="-fx-text-fill: white; -fx-font-weight: bold;" />
+            <Label text=" | " style="-fx-text-fill: white;" />
+            <Label fx:id="lblEmail" style="-fx-text-fill: white;" />
+            <Label text=" | " style="-fx-text-fill: white;" />
+            <Label fx:id="lblSecteurActivite" style="-fx-text-fill: white;" />
+        </HBox>
+    </top>
+
+    <!-- MENU LATÉRAL -->
+    <left>
+        <VBox spacing="15" style="-fx-background-color: #34495E; -fx-padding: 20;">
+            <Button text="Gestion Offres" maxWidth="200" onAction="#handleGestionOffres" style="-fx-background-color: transparent; -fx-text-fill: white;"/>
+            <Button text="Candidatures Reçues" maxWidth="200" onAction="#handleCandidaturesRecues" style="-fx-background-color: transparent; -fx-text-fill: white;"/>
+            <Button text="Profil Entreprise" maxWidth="200" onAction="#handleProfilEntreprise" style="-fx-background-color: transparent; -fx-text-fill: white;"/>
+            <Button text="Statistiques" maxWidth="200" onAction="#handleStatistiques" style="-fx-background-color: transparent; -fx-text-fill: white;"/>
+            <Button text="Messagerie" maxWidth="200" onAction="#handleMessagerie" style="-fx-background-color: transparent; -fx-text-fill: white;"/>
+            <Separator />
+            <Button text="Déconnexion" maxWidth="200" onAction="#handleLogout" style="-fx-background-color: #E74C3C; -fx-text-fill: white;"/>
+        </VBox>
+    </left>
+
+    <!-- CONTENU PRINCIPAL -->
+    <center>
+        <StackPane fx:id="contentArea" style="-fx-background-color: #ECF0F1; -fx-padding: 20;">
+            <!-- Les vues chargées dynamiquement seront placées ici -->
+        </StackPane>
+    </center>
+
+</BorderPane>

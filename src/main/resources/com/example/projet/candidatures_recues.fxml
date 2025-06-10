@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox xmlns="http://javafx.com/javafx/17"
+      xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="com.example.projet.controllers.CandidaturesRecuesController"
+      spacing="15" alignment="TOP_CENTER" style="-fx-padding: 20; -fx-background-color: white;">
+
+    <Label text="Candidatures Reçues" style="-fx-font-size: 22px; -fx-font-weight: bold;" />
+
+    <TableView fx:id="tableCandidatures" prefHeight="450" VBox.vgrow="ALWAYS"
+               style="-fx-border-color: #ddd; -fx-border-radius: 3;">
+        <columns>
+            <TableColumn fx:id="colNom" text="Nom" prefWidth="120"/>
+            <TableColumn fx:id="colPrenom" text="Prénom" prefWidth="120"/>
+            <TableColumn fx:id="colEmail" text="Email" prefWidth="180"/>
+            <TableColumn fx:id="colCv" text="CV" prefWidth="100"/>
+            <TableColumn fx:id="colMission" text="Offre" prefWidth="180"/>
+            <TableColumn fx:id="colDate" text="Date" prefWidth="120"/>
+            <TableColumn fx:id="colStatut" text="Statut" prefWidth="100"/>
+            <TableColumn fx:id="colModifierStatut" text="Modifier Statut" prefWidth="140"/>
+        </columns>
+    </TableView>
+
+    <HBox alignment="CENTER_RIGHT" style="-fx-padding: 10 0 0 0;">
+        <Label fx:id="notificationLabel" visible="false" style="-fx-text-fill: green; -fx-font-weight: bold;"/>
+    </HBox>
+</VBox>

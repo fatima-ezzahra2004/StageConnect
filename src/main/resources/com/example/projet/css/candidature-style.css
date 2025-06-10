@@ -1,0 +1,132 @@
+/* candidature-style.css */
+.root {
+    -fx-background-color: linear-gradient(to bottom right, #f5f7fa, #c3cfe2);
+}
+
+.header {
+    -fx-font-size: 24px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #2c3e50;
+    -fx-padding: 20 0 10 0;
+}
+
+.label {
+    -fx-font-size: 14px;
+    -fx-text-fill: #34495e;
+    -fx-font-weight: bold;
+}
+
+.text-field, .text-area, .combo-box {
+    -fx-background-color: #ffffff;
+    -fx-border-color: #bdc3c7;
+    -fx-border-radius: 5px;
+    -fx-padding: 8px;
+    -fx-font-size: 14px;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.1), 5, 0, 0, 0);
+}
+
+.text-area {
+    -fx-background-insets: 0;
+    -fx-background-color: transparent, white, transparent, white;
+}
+
+.button {
+    -fx-background-color: #3498db;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-font-size: 14px;
+    -fx-padding: 10 20 10 20;
+    -fx-border-radius: 5px;
+    -fx-background-radius: 5px;
+    -fx-cursor: hand;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.2), 5, 0, 0, 1);
+}
+
+.button:hover {
+    -fx-background-color: #2980b9;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.3), 8, 0, 0, 2);
+}
+
+.button:pressed {
+    -fx-background-color: #2c3e50;
+}
+
+.card {
+    -fx-background-color: white;
+    -fx-background-radius: 10px;
+    -fx-border-radius: 10px;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.1), 10, 0, 0, 0);
+    -fx-padding: 20px;
+}
+
+.separator {
+    -fx-padding: 10 0 10 0;
+}
+
+.error-label {
+    -fx-text-fill: #e74c3c;
+    -fx-font-size: 12px;
+}
+
+.success-message {
+    -fx-text-fill: #27ae60;
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+}/* Effets supplémentaires pour une UI moderne */
+ .value-label {
+     -fx-font-size: 16px;
+     -fx-text-fill: #2c3e50;
+     -fx-padding: 5 0 15 0;
+     -fx-border-color: #3498db;
+     -fx-border-width: 0 0 1 0;
+ }
+
+ .scroll-pane {
+     -fx-background-color: transparent;
+ }
+
+ .scroll-pane .viewport {
+     -fx-background-color: transparent;
+ }
+
+ .scroll-bar:vertical {
+     -fx-background-color: transparent;
+ }
+
+ .scroll-bar:vertical .thumb {
+     -fx-background-color: #bdc3c7;
+     -fx-background-radius: 5px;
+ }
+
+ /* Animation pour le bouton */
+ @keyframes pulse {
+     0% { -fx-scale-x: 1; -fx-scale-y: 1; }
+     50% { -fx-scale-x: 1.05; -fx-scale-y: 1.05; }
+     100% { -fx-scale-x: 1; -fx-scale-y: 1; }
+ }
+
+ .button:pressed {
+     -fx-animation: pulse 0.2s;
+ }
+ /* Dans candidature-style.css */
+ .custom-table {
+     -fx-background-color: #ffffff;
+     -fx-border-color: #bdc3c7;
+     -fx-border-radius: 5px;
+     -fx-padding: 10px;
+ }
+
+ .custom-table .column-header {
+     -fx-background-color: #3498db;
+     -fx-text-fill: white;
+     -fx-font-weight: bold;
+ }
+
+ .custom-table .table-row-cell:odd {
+     -fx-background-color: #f8f9fa;
+ }
+
+ .custom-table .table-row-cell:selected {
+     -fx-background-color: #3498db;
+     -fx-text-fill: white;
+ }

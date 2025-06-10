@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<BorderPane xmlns="http://javafx.com/javafx/11.0.1"
+            xmlns:fx="http://javafx.com/fxml/1"
+            stylesheets="@css/candidature-style.css"
+            fx:controller="com.example.projet.controllers.CandidatureController">
+
+    <center>
+        <VBox alignment="CENTER" spacing="20" styleClass="card"
+              BorderPane.alignment="CENTER">
+            <padding>
+                <Insets top="20" right="30" bottom="20" left="30"/>
+            </padding>
+
+            <Label text="Postuler à l'offre" styleClass="header"/>
+
+            <VBox spacing="10">
+
+                <Label fx:id="lblOffreTitre" styleClass="value-label"/>
+            </VBox>
+
+            <VBox spacing="10">
+
+                <Label fx:id="lblStagiaireNom" styleClass="value-label"/>
+            </VBox>
+
+            <Separator styleClass="separator"/>
+
+            <Button fx:id="btnPostuler" text="Postuler" styleClass="button"/>
+        </VBox>
+    </center>
+</BorderPane>

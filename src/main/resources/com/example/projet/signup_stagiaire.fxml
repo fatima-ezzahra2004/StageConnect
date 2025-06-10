@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.image.Image?>
+
+<HBox fx:id="rootPane"
+      xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.example.projet.controllers.SignupStagiaireController"
+      prefWidth="1000" prefHeight="650" spacing="20">
+
+    <!-- Formulaire à gauche -->
+    <VBox spacing="15" alignment="CENTER"
+          style="-fx-background-color: rgba(0, 0, 0, 0.6);
+                 -fx-background-radius: 18;
+                 -fx-padding: 40;
+                 -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.5), 15, 0, 0, 0);"
+          prefWidth="650">
+
+        <!-- Titre -->
+        <Label text="Inscription Stagiaire" style="-fx-font-size: 24px; -fx-font-weight: bold; -fx-text-fill: white;"/>
+
+        <!-- Champs de formulaire -->
+        <TextField fx:id="prenomField" promptText="Prénom"
+                   style="-fx-background-radius: 8; -fx-padding: 10;"/>
+        <TextField fx:id="nomField" promptText="Nom"
+                   style="-fx-background-radius: 8; -fx-padding: 10;"/>
+        <TextField fx:id="emailField" promptText="Email"
+                   style="-fx-background-radius: 8; -fx-padding: 10;"/>
+        <PasswordField fx:id="passwordField" promptText="Mot de passe"
+                       style="-fx-background-radius: 8; -fx-padding: 10;"/>
+        <TextArea fx:id="competencesField" promptText="Compétences"
+                  style="-fx-background-radius: 8; -fx-padding: 10;"/>
+        <TextArea fx:id="interetsField" promptText="Centres d’intérêt"
+                  style="-fx-background-radius: 8; -fx-padding: 10;"/>
+
+        <!-- Bouton de soumission -->
+        <Button text="S’inscrire" onAction="#handleSignup"
+                style="-fx-background-color: #2196f3; -fx-text-fill: white;
+                       -fx-background-radius: 8; -fx-padding: 10 20;"/>
+    </VBox>
+
+    <!-- Image à droite -->
+    <ImageView fitWidth="750" fitHeight="650" preserveRatio="false">
+        <image>
+            <Image url="@/com/example/projet/images/fond1.jpg"/>
+        </image>
+    </ImageView>
+
+</HBox>

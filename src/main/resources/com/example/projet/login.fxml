@@ -1,0 +1,48 @@
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.control.*?>
+
+<BorderPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.example.projet.controllers.LoginController"
+            prefWidth="1000" prefHeight="650">
+
+    <center>
+        <HBox prefWidth="1000" prefHeight="650">
+            <!-- Image de fond -->
+            <ImageView fitHeight="650" fitWidth="780" preserveRatio="false">
+                <image>
+                    <Image url="@/com/example/projet/images/fond1.jpg"/>
+                </image>
+            </ImageView>
+
+            <!-- Formulaire de connexion -->
+            <VBox alignment="CENTER" spacing="20" maxWidth="1000"
+                  style="-fx-background-color: rgba(0, 0, 0, 0.6);
+                         -fx-background-radius: 10;
+                         -fx-padding: 40;"
+                  HBox.hgrow="ALWAYS">
+                <Label text="Connexion à StageConnect"
+                       style="-fx-font-size: 28px; -fx-font-weight: bold; -fx-text-fill: white;"/>
+
+                <TextField fx:id="emailField" promptText="Email"
+                           style="-fx-background-radius: 8; -fx-padding: 10; -fx-background-color: #ffffff;"/>
+
+                <PasswordField fx:id="passwordField" promptText="Mot de passe"
+                               style="-fx-background-radius: 8; -fx-padding: 10; -fx-background-color: #ffffff;"/>
+
+                <HBox spacing="15" alignment="CENTER">
+                    <RadioButton fx:id="rbStagiaire" text="Stagiaire" style="-fx-text-fill: white;"/>
+                    <RadioButton fx:id="rbEntreprise" text="Entreprise" style="-fx-text-fill: white;"/>
+                </HBox>
+
+                <Button text="Se connecter" onAction="#handleLogin"
+                        style="-fx-background-color: #2196f3; -fx-text-fill: white;
+                               -fx-background-radius: 8; -fx-padding: 10 20;"/>
+
+                <Hyperlink text="Créer un compte" onAction="#goToSignup" style="-fx-text-fill: #ffffff;"/>
+            </VBox>
+        </HBox>
+    </center>
+</BorderPane>

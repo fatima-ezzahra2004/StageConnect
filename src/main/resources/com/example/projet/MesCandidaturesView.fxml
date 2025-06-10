@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+<BorderPane xmlns="http://javafx.com/javafx/17"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.example.projet.controllers.MesCandidaturesController"
+            stylesheets="@css/candidature-style.css">
+
+    <center>
+        <VBox spacing="20" styleClass="card">
+            <padding>
+                <Insets top="20" right="30" bottom="20" left="30"/>
+            </padding>
+
+            <Label text="Mes Candidatures" styleClass="header"/>
+
+            <TableView fx:id="tableCandidatures" styleClass="custom-table">
+                <columns>
+                    <TableColumn fx:id="colId" text="ID" prefWidth="50">
+                        <cellValueFactory>
+                            <PropertyValueFactory property="idCandidature" />
+                        </cellValueFactory>
+                    </TableColumn>
+                    <TableColumn fx:id="colOffre" text="Offre" prefWidth="200">
+                        <cellValueFactory>
+                            <PropertyValueFactory property="offreTitre" />
+                        </cellValueFactory>
+                    </TableColumn>
+                    <TableColumn fx:id="colDate" text="Date" prefWidth="120">
+                        <cellValueFactory>
+                            <PropertyValueFactory property="dateCandidature" />
+                        </cellValueFactory>
+                    </TableColumn>
+                    <TableColumn fx:id="colStatut" text="Statut" prefWidth="100">
+                        <cellValueFactory>
+                            <PropertyValueFactory property="statut" />
+                        </cellValueFactory>
+                    </TableColumn>
+                </columns>
+            </TableView>
+        </VBox>
+    </center>
+
+</BorderPane>
