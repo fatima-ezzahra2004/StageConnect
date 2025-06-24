@@ -18,7 +18,7 @@
             <TableColumn fx:id="colDomaine" text="Domaine" prefWidth="100"/>
             <TableColumn fx:id="colType" text="Type" prefWidth="80"/>
             <TableColumn fx:id="colNiveauRequis" text="Niveau Requis" prefWidth="120"/>
-            <TableColumn fx:id="colDuree" text="Durée (jours)" prefWidth="80"/>
+            <TableColumn fx:id="colDuree" text="durée" prefWidth="80"/>
             <TableColumn fx:id="colDatePublication" text="Date de Publication" prefWidth="120"/>
             <TableColumn fx:id="colRemuneration" text="Rémunération" prefWidth="100"/>
         </columns>

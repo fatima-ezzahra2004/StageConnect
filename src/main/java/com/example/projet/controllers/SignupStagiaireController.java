@@ -37,22 +37,6 @@ public class SignupStagiaireController {
         return matcher.matches();
     }
 
-    // Hashage du mot de passe avant l'enregistrement
-    private String hashPassword(String password) {
-        try {
-            MessageDigest digest = MessageDigest.getInstance("SHA-256");
-            byte[] hashedBytes = digest.digest(password.getBytes(StandardCharsets.UTF_8));
-            StringBuilder hexString = new StringBuilder();
-            for (byte b : hashedBytes) {
-                hexString.append(String.format("%02x", b));
-            }
-            return hexString.toString();
-        } catch (NoSuchAlgorithmException e) {
-            e.printStackTrace();
-            return null;
-        }
-    }
-
     // Fonction d'inscription
     public void handleSignup() {
         String prenom = prenomField.getText();

@@ -29,7 +29,7 @@
             <Label text="Niveau requis :" GridPane.rowIndex="4" GridPane.columnIndex="0"/>
             <TextField fx:id="niveauRequisField" GridPane.rowIndex="4" GridPane.columnIndex="1"/>
 
-            <Label text="Durée (jours) :" GridPane.rowIndex="5" GridPane.columnIndex="0"/>
+            <Label text="Durée  :" GridPane.rowIndex="5" GridPane.columnIndex="0"/>
             <TextField fx:id="dureeField" GridPane.rowIndex="5" GridPane.columnIndex="1"/>
 
             <Label text="Date de publication :" GridPane.rowIndex="6" GridPane.columnIndex="0"/>
