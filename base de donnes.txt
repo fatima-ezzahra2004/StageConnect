@@ -1,0 +1,64 @@
+CREATE DATABASE IF NOT EXISTS gestionstagiaire;
+USE gestionstagiaire;
+
+-- Table entreprise
+CREATE TABLE entreprise (
+    idEntreprise INT AUTO_INCREMENT PRIMARY KEY,
+    nom VARCHAR(150),
+    secteur_activite VARCHAR(100),
+    email VARCHAR(100),
+    mot_de_passe VARCHAR(255),
+    description TEXT
+);
+
+-- Table stagiaire
+CREATE TABLE stagiaire (
+    idStagiaire INT AUTO_INCREMENT PRIMARY KEY,
+    nom VARCHAR(100),
+    prenom VARCHAR(100),
+    email VARCHAR(100),
+    mot_de_passe VARCHAR(255),
+    cv_pdf VARCHAR(255),
+    competences TEXT,
+    interets TEXT
+);
+
+-- Table mission (offres de stage)
+CREATE TABLE mission (
+    idMission INT AUTO_INCREMENT PRIMARY KEY,
+    titre VARCHAR(150),
+    description TEXT,
+    type ENUM('stage', 'projet'),
+    domaine VARCHAR(100),
+    niveau_requis VARCHAR(50),
+    duree INT,
+    date_publication DATE,
+    est_remunere TINYINT(1),
+    entreprise_id INT,
+    FOREIGN KEY (entreprise_id) REFERENCES entreprise(idEntreprise)
+        ON DELETE CASCADE
+);
+
+-- Table candidature
+CREATE TABLE candidature (
+    idCandidature INT AUTO_INCREMENT PRIMARY KEY,
+    date_candidature DATE,
+    statut ENUM('En attente', 'Acceptée', 'Refusée'),
+    stagiaire_id INT,
+    mission_id INT,
+    FOREIGN KEY (stagiaire_id) REFERENCES stagiaire(idStagiaire)
+        ON DELETE CASCADE,
+    FOREIGN KEY (mission_id) REFERENCES mission(idMission)
+        ON DELETE CASCADE
+);
+
+-- Table message (messagerie entre stagiaire et entreprise)
+CREATE TABLE message (
+    id_message INT AUTO_INCREMENT PRIMARY KEY,
+    contenu TEXT,
+    date_envoi DATETIME,
+    id_expediteur INT,
+    id_destinataire INT,
+    id_entreprise INT,
+    lu TINYINT(1)
+);
