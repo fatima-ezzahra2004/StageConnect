@@ -1,10 +1,20 @@
-## 📸 Aperçu du projet StageConnect
+<h2>✨ Interface utilisateur</h2>
 
-### 🏠 Interface principale
-![Interface principale](javafx1.PNG)
+<p align="center">
+  <img src="javafx1.PNG" width="600">
+</p>
+<p align="center"><b>Page d’accueil</b> — Navigation simple et claire</p>
 
-### 📋 Gestion des stages
-![Gestion des stages](javafx2.PNG)
+<hr>
 
-### 👤 Espace utilisateur
-![Espace utilisateur](javafx3.PNG)
+<p align="center">
+  <img src="javafx2.PNG" width="600">
+</p>
+<p align="center"><b>Inscription Stagiaire</b> — Validation + feedback utilisateur</p>
+
+<hr>
+
+<p align="center">
+  <img src="javafx3.PNG" width="600">
+</p>
+<p align="center"><b>Connexion</b> — Sélection du rôle et sécurité</p>
